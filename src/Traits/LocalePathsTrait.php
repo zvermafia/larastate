@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace Zvermafia\Larastate\Traits;
 
+use Exception;
+
 trait LocalePathsTrait
 {
     use HelpersTrait;
@@ -15,7 +17,7 @@ trait LocalePathsTrait
      */
     protected function getLocalePath(): string
     {
-        if ($this->reflection->hasProperty('locale_path') && is_string($this->locale_path)) {
+        if (isset($this->locale_path) && is_string($this->locale_path)) {
             return $this->locale_path;
         }
 

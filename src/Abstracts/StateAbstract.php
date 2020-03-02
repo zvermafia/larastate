@@ -20,6 +20,15 @@ abstract class StateAbstract
     use LocalePathsTrait;
     use HelpersTrait;
 
+    /**
+     * A localizations file path for the entity.
+     *
+     * Optional.
+     *
+     * @var string
+     */
+    protected $locale_path;
+
     /** @var \ReflectionClass */
     protected $reflection;
 
@@ -65,15 +74,12 @@ abstract class StateAbstract
         switch ($postfix) {
             case 'Values':
                 return $this->getValues($state_name_snake_case);
-                break;
 
             case 'ValuesWithLocales':
                 return $this->getValuesWithLocales($state_name_snake_case);
-                break;
 
             case 'Locale':
                 return $this->getLocale($state_name_snake_case, $arguments[0]);
-                break;
         }
     }
 

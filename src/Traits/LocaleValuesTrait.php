@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace Zvermafia\Larastate\Traits;
 
+use function trans;
+
 trait LocaleValuesTrait
 {
     use LocaleKeysTrait;
