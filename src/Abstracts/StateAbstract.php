@@ -15,10 +15,7 @@ use Zvermafia\Larastate\Traits\HelpersTrait;
 
 abstract class StateAbstract
 {
-    use LocaleKeysTrait;
     use LocaleValuesTrait;
-    use LocalePathsTrait;
-    use HelpersTrait;
 
     /**
      * A localizations file path for the entity.
@@ -100,6 +97,8 @@ abstract class StateAbstract
      * Get values and locales for the given state.
      *
      * @param string $state_name
+     * @throws \UnexpectedValueException If amount of the state values and their localizations are different
+     * @throws \UnexpectedValueException If the state values and their localizations don't match by key
      * @return array
      */
     private function getValuesWithLocales(string $state_name): array
