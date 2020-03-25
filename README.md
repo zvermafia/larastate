@@ -167,6 +167,7 @@ Let's assume we want to setup a state class for a post entity, so our steps are 
             'blog' => 1,
             'news' => 2,
         ];
+    }
     ```
 4. Create localization file in a `resources/lang/en/entities` directory with the entity name, so in our case it will be `post.php` . It's a regular Laravel's localization file but by default all state localizations should be grouped in a `state` key of the array. So you should have something like below:
     ```php
