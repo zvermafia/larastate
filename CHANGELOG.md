@@ -14,6 +14,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   So you don't need to instantiate state class in controllers then pass it to views,
   in views you can use `larastate()` global function.
 
+## [0.1.3] - 2020-10-01
+### Added
+- Supporting Laravel ^8.0
+
+### Changed
+- Updated some information about the package in the composer.json file
+- Fixes coding standart name in the phpcs.xml.dist file
+
+### Removed
+- Supporting Laravel ^5.6
+
 ## [0.1.2] - 2020-03-25
 ## [0.1.1] - 2020-03-02
 ## [0.1.0] - 2020-02-28
